@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class EnemyPathfinding : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float moveSpeed = 1f;
+    private Rigidbody2D rb;
+    private Vector2 moveDir;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        Move();
     }
+
+    private void Move()
+    {
+        rb.MovePosition(rb.position + moveDir * (moveSpeed * Time.fixedDeltaTime));
+    }
+
+    public void MoveTo(Vector2 targetPosition)
+    {
+        moveDir = targetPosition;
+    }
+
 }

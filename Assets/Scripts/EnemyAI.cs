@@ -18,7 +18,8 @@ public class EnemyAI : MonoBehaviour
         state = State.Roaming;
     }
 
-    private void Start() {
+    private void Start()
+    {
         StartCoroutine(RoamingRoutine());
     }
 
@@ -27,7 +28,7 @@ public class EnemyAI : MonoBehaviour
         while (state == State.Roaming)
         {
             Vector2 roamPosition = GetRoamingPosition();
-            Debug.Log(roamPosition);
+            enemyPathfinding.MoveTo(roamPosition);
             yield return new WaitForSeconds(2f);
         }
     }
