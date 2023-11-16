@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 377940332541073744}
   - component: {fileID: 4933117763189158011}
   m_Layer: 0
-  m_Name: Shadows
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
