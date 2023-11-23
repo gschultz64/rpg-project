@@ -28,7 +28,10 @@ public class TransparentDetection : MonoBehaviour
             }
             else if (tilemap)
             {
-                StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, transparencyAmount));
+                if (tilemap.isActiveAndEnabled)
+                {
+                    StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, transparencyAmount));
+                }
             }
         }
     }
@@ -44,7 +47,10 @@ public class TransparentDetection : MonoBehaviour
             }
             else if (tilemap)
             {
-                StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, baseTransparancy));
+                if (tilemap.isActiveAndEnabled)
+                {
+                    StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, baseTransparancy));
+                }
             }
         }
     }
