@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6fc7bfc847e0214ba604f423cb67558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamingDelay: 2
 --- !u!114 &6794826184732424221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 5119656889912983805, guid: 2ca592bce0b80844f88292514592117d, type: 3}
+  knockbackThrust: 15
 --- !u!114 &3407238383036962407
 MonoBehaviour:
   m_ObjectHideFlags: 0
