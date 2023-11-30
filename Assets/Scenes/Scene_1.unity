@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 81426014}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0.19, z: 0}
+  m_LocalPosition: {x: 0.465, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -355,9 +355,9 @@ PolygonCollider2D:
       - {x: 0.51263654, y: 1.2980908}
       - {x: 0.6517789, y: 0.7083864}
       - {x: 0.55713624, y: 0.012125015}
-      - {x: -0.9088559, y: -1.0188214}
-      - {x: 1.9637145, y: -1.0373197}
-      - {x: 1.9666283, y: 1.850519}
+      - {x: -0.355021, y: -1.124314}
+      - {x: 2.3329372, y: -1.1296256}
+      - {x: 2.2962925, y: 1.9164517}
   m_UseDelaunayMesh: 0
 --- !u!114 &143478407
 MonoBehaviour:
@@ -1232,6 +1232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488544392}
   - component: {fileID: 488544393}
+  - component: {fileID: 488544394}
   m_Layer: 0
   m_Name: Active Weapon
   m_TagString: Untagged
@@ -1248,7 +1249,7 @@ Transform:
   m_GameObject: {fileID: 488544391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.228, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1265,6 +1266,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a203c5b847a76c848898ca5422a92440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &488544394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488544391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8428c620d961444aaed4e2997085cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &502483275 stripped
@@ -1404,7 +1417,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0794234, y: -2.135553, z: -10.025408}
+  m_LocalPosition: {x: 7.0899806, y: -2.135553, z: -10.025408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11558,6 +11571,7 @@ MonoBehaviour:
   moveSpeed: 5
   dashSpeed: 4
   myTrailRenderer: {fileID: 1001535378}
+  weaponCollider: {fileID: 143478405}
 --- !u!95 &1186600616
 Animator:
   serializedVersion: 5
