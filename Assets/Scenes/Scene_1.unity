@@ -371,7 +371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5309ce4a423b5804daa288e2a8a39ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
 --- !u!1001 &182066123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -821,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7064083585199423852, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.361886
@@ -1172,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7064083585199423852, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1312394
@@ -1417,7 +1424,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0847893, y: -2.135553, z: -10.025408}
+  m_LocalPosition: {x: -2.2418094, y: -0.115562856, z: -10.025408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8622,6 +8629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7064083585199423852, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8011327
@@ -8823,7 +8834,7 @@ Transform:
   m_GameObject: {fileID: 1186600611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.77, y: -1.18, z: 0}
+  m_LocalPosition: {x: -1.92, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8944,7 +8955,7 @@ Transform:
   m_GameObject: {fileID: 1200862532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.448191, y: -2.135563, z: -10.025408}
+  m_LocalPosition: {x: -2.2418094, y: -0.115562856, z: -10.025408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14051,6 +14062,10 @@ PrefabInstance:
     - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_Name
       value: Torch (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7064083585199423852, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35463,6 +35478,10 @@ PrefabInstance:
     - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_Name
       value: Torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566228551219232723, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7064083585199423852, guid: c89d4535567e2824fbc87150597e0b10, type: 3}
       propertyPath: m_LocalPosition.x

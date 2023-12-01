@@ -33,6 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2632472196536757738}
+  - {fileID: 8748628535180682929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2631586569875011837
@@ -48,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInfo: {fileID: 11400000, guid: f99b3ffa2c3fb094aa0054299835e335, type: 2}
+  magicLaser: {fileID: 6773284447867495364, guid: 188e6826c1dcfbf4582e9ed298c6cdbb, type: 3}
+  magicLaserSpawnPoint: {fileID: 8748628535180682929}
 --- !u!212 &176337242062015557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -205,3 +208,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7176086180673637827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8748628535180682929}
+  m_Layer: 0
+  m_Name: Laser Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8748628535180682929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176086180673637827}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.392, y: -0.018, z: -0.00022346491}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6913341288273487309}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

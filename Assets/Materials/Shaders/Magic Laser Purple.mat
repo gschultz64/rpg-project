@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Purple
+  m_Name: Magic Laser Purple
   m_Shader: {fileID: -6465566751694194690, guid: 1f88f66eba188434187475e848a4d358, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,5 +55,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color: {r: 10.290196, g: 2.2177029, b: 47.937256, a: 0}
+    - _Color: {r: 2.572549, g: 0.5544257, b: 11.984314, a: 0}
   m_BuildTextureStacks: []
