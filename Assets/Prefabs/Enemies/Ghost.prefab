@@ -238,9 +238,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012178407, y: -0.001549782}
-  m_Size: {x: 1.0208088, y: 0.75693333}
-  m_Direction: 1
+  m_Offset: {x: 0.02, y: 0.19370139}
+  m_Size: {x: 1.01, y: 1.185804}
+  m_Direction: 0
 --- !u!114 &5827943544287429124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +257,7 @@ MonoBehaviour:
   attackRange: 5
   enemyType: {fileID: 4005135261088023358}
   attackCooldown: 2
+  stopMovingWhileAttacking: 1
 --- !u!114 &8613227451428415370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,3 +350,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7917923460088098600, guid: 0e8d4ad4d5747e2419ba72f62e6757f3, type: 3}
+  bulletMoveSpeed: 5
+  burstCount: 3
+  projectilesPerBurst: 8
+  angleSpread: 97
+  startingDistance: 0.3
+  timeBetweenBursts: 1
+  restTime: 0.5
+  stagger: 0
+  oscillate: 0
