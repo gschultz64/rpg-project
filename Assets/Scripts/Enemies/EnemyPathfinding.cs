@@ -19,11 +19,6 @@ public class EnemyPathfinding : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
-    }
-
-    private void Move()
-    {
         if (knockback.GettingKnockedBack) { return; }
         rb.MovePosition(rb.position + moveDir * (moveSpeed * Time.fixedDeltaTime));
 
@@ -31,7 +26,7 @@ public class EnemyPathfinding : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-        else
+        else if (moveDir.x > 0)
         {
             spriteRenderer.flipX = false;
         }
