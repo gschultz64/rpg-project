@@ -10,7 +10,7 @@ public class Bow : MonoBehaviour, IWeapon
 
     private Animator myAnimator;
 
-    readonly int FIRE_HASH = Animator.StringToHash("Fire");
+    readonly int FIRE_HASH = Animator.StringToHash("Fire"); // run-time constant
 
     private void Awake() {
         myAnimator = GetComponent<Animator>();

@@ -10,7 +10,7 @@ public class Grape : MonoBehaviour, IEnemy
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
 
-    readonly int ATTACK_HASH = Animator.StringToHash("Attack");
+    readonly int ATTACK_HASH = Animator.StringToHash("Attack"); // run-time constant
 
     private void Awake() {
         myAnimator = GetComponent<Animator>();
