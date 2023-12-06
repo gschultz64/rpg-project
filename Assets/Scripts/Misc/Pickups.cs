@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Pickups : MonoBehaviour
 {
+    private enum PickupType
+    {
+        GoldCoin,
+        StaminaGlobe,
+        HealthGlobe
+    }
+
+    [SerializeField] private PickupType pickupType;
     [SerializeField] private float pickupDistance = 5f;
     [SerializeField] private float accelerationRate = .2f;
     [SerializeField] private float moveSpeed = 3f;
@@ -14,37 +22,44 @@ public class Pickups : MonoBehaviour
     private Vector3 moveDir;
     private Rigidbody2D rb;
 
-    private void Awake() {
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start() {
+    private void Start()
+    {
         Vector3 endPos = transform.position + new Vector3(Random.Range(-0.5f, 0.5f), 0);
 
         StartCoroutine(AnimCurveSpawnRoutine(transform.position, endPos));
     }
 
-    private void Update() {
+    private void Update()
+    {
         Vector3 playerPos = PlayerController.Instance.transform.position;
 
         if (Vector3.Distance(transform.position, playerPos) < pickupDistance)
         {
             moveDir = (playerPos - transform.position).normalized;
             moveSpeed += accelerationRate;
-        } else
+        }
+        else
         {
             moveDir = Vector3.zero;
             moveSpeed = 0;
         }
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         rb.velocity = moveDir * moveSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            DetectPickupType();
             Destroy(gameObject);
         }
     }
@@ -63,6 +78,24 @@ public class Pickups : MonoBehaviour
             transform.position = Vector2.Lerp(startPosition, endPosition, linearT) + new Vector2(0f, height);
 
             yield return null;
+        }
+    }
+
+    private void DetectPickupType()
+    {
+        switch (pickupType)
+        {
+            default:
+            case PickupType.GoldCoin:
+                Debug.Log("Gold Coin");
+                break;
+            case PickupType.HealthGlobe:
+                PlayerHealth.Instance.HealPlayer();
+                Debug.Log("Health globe");
+                break;
+            case PickupType.StaminaGlobe:
+                Debug.Log("Stamina globe");
+                break;
         }
     }
 }
