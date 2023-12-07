@@ -11,7 +11,7 @@ public class ActiveInventory : Singleton<ActiveInventory>
     protected override void Awake()
     {
         base.Awake();
-        
+
         playerControls = new PlayerControls();
     }
 
@@ -52,6 +52,8 @@ public class ActiveInventory : Singleton<ActiveInventory>
 
     private void ChangeActiveWeapon()
     {
+        if (PlayerHealth.Instance.IsDead) { return; }
+        
         if (ActiveWeapon.Instance.CurrentActiveWeapon != null)
         {
             Destroy(ActiveWeapon.Instance.CurrentActiveWeapon.gameObject);
@@ -60,6 +62,7 @@ public class ActiveInventory : Singleton<ActiveInventory>
         Transform childTransform = transform.GetChild(activeSlotIndexNum);
         InventorySlot inventorySlot = childTransform.GetComponentInChildren<InventorySlot>();
         WeaponInfo weaponInfo = inventorySlot.GetWeaponInfo();
+        GameObject weaponToSpawn = weaponInfo.weaponPrefab;
 
         if (weaponInfo == null)
         {
@@ -67,7 +70,6 @@ public class ActiveInventory : Singleton<ActiveInventory>
             return;
         }
 
-        GameObject weaponToSpawn = weaponInfo.weaponPrefab;
 
         GameObject newWeapon = Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform.position, Quaternion.identity);
         ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, 0);

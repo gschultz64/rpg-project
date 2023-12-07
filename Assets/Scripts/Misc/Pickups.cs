@@ -46,7 +46,7 @@ public class Pickups : MonoBehaviour
         else
         {
             moveDir = Vector3.zero;
-            moveSpeed = 0;
+            moveSpeed = 0f;
         }
     }
 
@@ -85,7 +85,6 @@ public class Pickups : MonoBehaviour
     {
         switch (pickupType)
         {
-            default:
             case PickupType.GoldCoin:
                 EconomyManager.Instance.UpdateCurrentGold();
                 break;
@@ -94,6 +93,8 @@ public class Pickups : MonoBehaviour
                 break;
             case PickupType.StaminaGlobe:
                 Stamina.Instance.RefreshStamina();
+                break;
+            default:
                 break;
         }
     }
