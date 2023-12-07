@@ -6,7 +6,6 @@ public class Sword : MonoBehaviour, IWeapon
 {
     [SerializeField] private GameObject slashAnimPrefab;
     [SerializeField] private Transform slashAnimSpawnPoint;
-    // [SerializeField] private float attackCooldownTime = .4f;
     [SerializeField] private WeaponInfo weaponInfo;
 
     private Transform weaponCollider;
@@ -16,21 +15,17 @@ public class Sword : MonoBehaviour, IWeapon
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
-        slashAnimSpawnPoint = GameObject.Find("SlashAnimationSpawnPoint").transform; // not best practice, since string could change in Unity
     }
 
-    private void Start() {
+    private void Start()
+    {
         weaponCollider = PlayerController.Instance.GetWeaponCollider();
+        slashAnimSpawnPoint = GameObject.Find("SlashAnimationSpawnPoint").transform; // not best practice, since string could change in Unity
     }
 
     private void Update()
     {
         MouseFollowWithOffset();
-    }
-
-    public WeaponInfo GetWeaponInfo()
-    {
-        return weaponInfo;
     }
 
     public void Attack()
@@ -40,7 +35,11 @@ public class Sword : MonoBehaviour, IWeapon
         weaponCollider.gameObject.SetActive(true);
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;
-        // StartCoroutine(AttackCDRoutine());
+    }
+
+    public WeaponInfo GetWeaponInfo()
+    {
+        return weaponInfo;
     }
 
     public void DoneAttackingAnimEvent()
@@ -84,12 +83,5 @@ public class Sword : MonoBehaviour, IWeapon
             ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, angle);
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-
     }
-
-    /* private IEnumerator AttackCDRoutine()
-    {
-        yield return new WaitForSeconds(attackCooldownTime);
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
-    } */
 }

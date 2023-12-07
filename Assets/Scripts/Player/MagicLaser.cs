@@ -48,12 +48,9 @@ public class MagicLaser : MonoBehaviour
             // sprite grows horizontally
             spriteRenderer.size = new Vector2(Mathf.Lerp(1f, laserRange, linearT), 1f);
 
-            float xSize = Mathf.Lerp(1f, laserRange, linearT);
-            float xOffset = Mathf.Lerp(1f, laserRange, linearT) / 2;
-
             // magic laser collider grows horizontally
-            laserCollider.size = new Vector2(xSize, laserCollider.size.y);
-            laserCollider.offset = new Vector2(xOffset, laserCollider.offset.y);
+            laserCollider.size = new Vector2(Mathf.Lerp(1f, laserRange, linearT), laserCollider.size.y);
+            laserCollider.offset = new Vector2((Mathf.Lerp(1f, laserRange, linearT)) / 2, laserCollider.offset.y);
 
             yield return null;
         }

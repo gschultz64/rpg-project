@@ -22,6 +22,10 @@ public class Projectile : MonoBehaviour
         DetectFireDistance();
     }
 
+    public bool GetIsEnemyProjectile() {
+        return isEnemyProjectile;
+    }
+
     public void UpdateProjectileRange(float projectileRange)
     {
         this.projectileRange = projectileRange;

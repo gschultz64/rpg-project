@@ -23,7 +23,6 @@ public class Staff : MonoBehaviour, IWeapon
     }
     public void Attack()
     {
-        Debug.Log("Staff Attack");
         myAnimator.SetTrigger(FIRE_HASH);
     }
 
