@@ -18,7 +18,10 @@ public class GrapeLandSplatter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-        playerHealth?.TakeDamage(1, transform);
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(1, transform);
+        }
     }
 
     private void DisableCollider()

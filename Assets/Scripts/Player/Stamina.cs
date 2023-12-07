@@ -11,7 +11,7 @@ public class Stamina : Singleton<Stamina>
     [SerializeField] private int timeBetweenStaminaRefresh = 3;
 
     private Transform staminaContainer;
-    private int startingStamina = 3;
+    readonly int startingStamina = 3;
     private int maxStamina;
     const string STAMINA_CONTAINER_TEXT = "Stamina Container";
 
@@ -66,17 +66,19 @@ public class Stamina : Singleton<Stamina>
         for (int i = 0; i < maxStamina; i++)
         {
             Transform child = staminaContainer.GetChild(i);
-            Image image = child?.GetComponent<Image>();
-
-            if (i <= CurrentStamina - 1)
+            
+            if (child.TryGetComponent<Image>(out var image))
             {
-                image.sprite = fullStaminaImage;
+                if (i <= CurrentStamina - 1)
+                {
+                    image.sprite = fullStaminaImage;
+                }
+                else
+                {
+                    image.sprite = emptyStaminaImage;
+                }
             }
-            else
-            {
-                image.sprite = emptyStaminaImage;
 
-            }
         }
     }
 }

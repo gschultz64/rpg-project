@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject particleOnHitVFX;
     [SerializeField] private bool isEnemyProjectile = false;
     [SerializeField] private float projectileRange = 10f;
-    
+
     private Vector3 startPosition;
 
     private void Start()
@@ -42,7 +42,11 @@ public class Projectile : MonoBehaviour
         {
             if ((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
             {
-                player?.TakeDamage(1, transform);
+                if (player != null)
+                {
+                    player.TakeDamage(1, transform);
+                }
+                
                 Instantiate(particleOnHitVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
             }

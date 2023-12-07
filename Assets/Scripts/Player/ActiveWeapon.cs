@@ -47,11 +47,6 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         CurrentActiveWeapon = null;
     }
 
-    /* public void ToggleIsAttacking(bool value)
-    {
-        isAttacking = value;
-    } */
-
     private void AttackCooldown()
     {
         isAttacking = true;
