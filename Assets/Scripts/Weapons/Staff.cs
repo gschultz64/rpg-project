@@ -42,7 +42,7 @@ public class Staff : MonoBehaviour, IWeapon
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(PlayerController.Instance.transform.position);
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * (Mathf.Rad2Deg / 2);
 
         // flip staff position with player
         if (mousePos.x < playerScreenPoint.x)

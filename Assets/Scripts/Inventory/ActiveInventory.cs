@@ -53,7 +53,7 @@ public class ActiveInventory : Singleton<ActiveInventory>
     private void ChangeActiveWeapon()
     {
         if (PlayerHealth.Instance.IsDead) { return; }
-        
+
         if (ActiveWeapon.Instance.CurrentActiveWeapon != null)
         {
             Destroy(ActiveWeapon.Instance.CurrentActiveWeapon.gameObject);
@@ -62,14 +62,17 @@ public class ActiveInventory : Singleton<ActiveInventory>
         Transform childTransform = transform.GetChild(activeSlotIndexNum);
         InventorySlot inventorySlot = childTransform.GetComponentInChildren<InventorySlot>();
         WeaponInfo weaponInfo = inventorySlot.GetWeaponInfo();
-        GameObject weaponToSpawn = weaponInfo.weaponPrefab;
+        GameObject weaponToSpawn;
 
-        if (weaponInfo == null)
+        if (weaponInfo != null)
+        {
+            weaponToSpawn = weaponInfo.weaponPrefab;
+        }
+        else
         {
             ActiveWeapon.Instance.WeaponNull();
             return;
         }
-
 
         GameObject newWeapon = Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform);
 
