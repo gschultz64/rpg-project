@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03452c453ae19e4418c14ceb9ccce0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 6
   deathVFXPrefab: {fileID: 5119656889912983805, guid: 14a778e9bfc95e64cbb564324cdb38f2, type: 3}
   knockbackThrust: 15
 --- !u!114 &4986370993673403940
@@ -353,11 +353,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7917923460088098600, guid: 0e8d4ad4d5747e2419ba72f62e6757f3, type: 3}
   bulletMoveSpeed: 4
   burstCount: 15
-  projectilesPerBurst: 12
+  projectilesPerBurst: 13
   angleSpread: 152
   startingDistance: 0.3
   timeBetweenBursts: 5
-  restTime: 0.1
+  restTime: 0.3
   stagger: 1
   oscillate: 1
 --- !u!114 &8471474268571479089

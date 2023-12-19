@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03452c453ae19e4418c14ceb9ccce0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 4
   deathVFXPrefab: {fileID: 5119656889912983805, guid: bc9ffc82cae66b2428e70d17ae45ee7b, type: 3}
   knockbackThrust: 15
 --- !u!114 &2793723147315686289

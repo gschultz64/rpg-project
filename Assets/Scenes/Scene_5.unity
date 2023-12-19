@@ -3691,7 +3691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 132842852631688531, guid: 7933542aacbd73d41b6ad3ecc085412c, type: 3}
       propertyPath: sceneTransitionName
-      value: East_Entrance
+      value: West_Entrance
       objectReference: {fileID: 0}
     - target: {fileID: 1894038877789905252, guid: 7933542aacbd73d41b6ad3ecc085412c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9587,11 +9587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324188198110847560, guid: 8130182051cbea34b822d6fa6ec4ae60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.16
+      value: -14.07
       objectReference: {fileID: 0}
     - target: {fileID: 7324188198110847560, guid: 8130182051cbea34b822d6fa6ec4ae60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 8.91
       objectReference: {fileID: 0}
     - target: {fileID: 7324188198110847560, guid: 8130182051cbea34b822d6fa6ec4ae60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10179,11 +10179,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 533648310925132819, guid: b3e54c13b9102bf4aba1c3498e77b1f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.48181
+      value: -14.391809
       objectReference: {fileID: 0}
     - target: {fileID: 533648310925132819, guid: b3e54c13b9102bf4aba1c3498e77b1f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0444374
+      value: 7.9544373
       objectReference: {fileID: 0}
     - target: {fileID: 2942762202964346786, guid: b3e54c13b9102bf4aba1c3498e77b1f3, type: 3}
       propertyPath: m_LocalPosition.x
